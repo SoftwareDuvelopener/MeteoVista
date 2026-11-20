@@ -90,7 +90,8 @@ def render_row(day):
         <td><span class="wind" role="img" aria-label="Wind uit {direction}, {beaufort} beaufort"
                   title="{direction}, {beaufort} Bft">
           <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-            <path d="M16 1 L22 14 L16 31 L10 18 Z" transform="rotate({rotation} 16 16)" fill="currentColor"/>
+            <path d="M9 5 L16 7 L23 5 L16 30 Z" transform="rotate({rotation} 16 16)"
+                  fill="currentColor" stroke="currentColor" stroke-linejoin="round"/>
             <circle cx="16" cy="16" r="8" fill="white" stroke="currentColor" stroke-width="2"/>
           </svg>
           <span aria-hidden="true">{beaufort}</span>
@@ -126,7 +127,7 @@ def render_page(rows):
     .weather { width: 50px; height: 40px; }
     .score { width: 32px; height: 32px; }
     .wind { display: grid; width: 32px; height: 32px; margin: auto;
-            place-items: center; color: #406397; font-size: 12px; font-weight: 700; }
+            place-items: center; color: #406397; font-size: 11.5px; font-weight: 700; line-height: 1; }
     .wind > * { grid-area: 1 / 1; }
     footer { margin: 14px 0; font-size: 13px; color: #68768b; }
     footer a { color: inherit; }
